@@ -1,0 +1,10 @@
+%nav.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container-fluid
+      .navbar-header
+        = link_to t(:site_name), root_path, class: 'navbar-brand'
+      %div
+        - if signed_in?
+          = render partial: 'shared/user'
+        - else
+          = render partial: 'shared/guest'

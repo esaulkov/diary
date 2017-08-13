@@ -1,0 +1,7 @@
+- if flash.any?
+  .col-md-12
+    - flash.each do |key, value|
+      %div{class: "alert #{bootstrap_class_for key} fade in"}
+        %a.close{ "aria-label":  "close", "data-dismiss": "alert", href: "#",
+        title: "close" } &times;
+        = value
