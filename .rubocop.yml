@@ -1,0 +1,23 @@
+AllCops:
+  TargetRubyVersion: 2.4
+  Exclude:
+    - 'spec/**/*'
+    - '**/Rakefile'
+    - 'db/schema.rb'
+  DisplayStyleGuide: true
+Documentation:
+  Enabled: false
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: false
+Metrics/BlockLength:
+  Exclude:
+    - "config/**/*"
+Metrics/LineLength:
+  Max: 120
+  Exclude:
+    - "config/**/*"
+Metrics/MethodLength:
+  Exclude:
+    - "db/migrate/*"
+Style/AsciiComments:
+  Enabled: false
