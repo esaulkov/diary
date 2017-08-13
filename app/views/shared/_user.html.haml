@@ -1,5 +1,7 @@
 %ul.nav.navbar-nav.navbar-right
   %li
+    = link_to t(:calendar), calendar_path(current_user.calendar)
+  %li
     = link_to edit_user_registration_path do
       %span.glyphicon.glyphicon-user
       = current_user.email
