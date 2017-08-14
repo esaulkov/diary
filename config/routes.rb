@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   delete '/delete_event/:id', to: 'calendars#remove_event', as: 'delete_event'
 
   resources :events, except: [:index]
+  post '/events/share', to: 'events#share', as: 'share_event'
 end

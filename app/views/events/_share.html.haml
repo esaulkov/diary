@@ -1,0 +1,7 @@
+.modal-header
+  %h4= t('.title')
+= simple_form_for :event, url: share_event_url, method: :post do |f|
+  .modal-body
+    = f.input :id, as: :hidden, id: 'share_event_id'
+    = f.input :email
+    = f.submit t('actions.share'), class: 'btn btn-primary'

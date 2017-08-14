@@ -2,3 +2,7 @@
 .container
   = link_to t('events.new.title'), new_event_path, style: 'float: right;'
 = render partial: 'events/index', locals: { events: @events }
+.modal.fade
+  .modal-dialog
+    .modal-content
+      = render partial: 'events/share'

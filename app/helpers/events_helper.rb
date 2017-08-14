@@ -25,4 +25,13 @@ module EventsHelper
         = t 'actions.edit'
     HAML
   end
+
+  def share_event_link(event)
+    return unless event.user == current_user
+    render_haml <<~HAML, event: event
+      = link_to '', class: 'share_event', id: event.id do
+        %span.glyphicon.glyphicon-share
+        = t 'actions.share'
+    HAML
+  end
 end

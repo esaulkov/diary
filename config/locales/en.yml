@@ -5,6 +5,11 @@ en:
     edit: "Edit"
     remove: "Remove"
     save: "Save"
+    share: "Share"
+  alerts:
+    event:
+      email_not_found: "User with this email does not found"
+      double_shared: "You shared event to this user before"
   back: "Back"
   calendar: "Calendar"
   change_password: "Change password"
@@ -19,6 +24,8 @@ en:
       start: "Date/time"
     new:
       title: "New event"
+    share:
+      title: "Enter user email"
     show:
       user: "Owner:"
       description: "Description:"
@@ -32,5 +39,6 @@ en:
     event:
       created: "Event was created successfully"
       deleted: "Event was deleted successfully"
+      shared: "Event was shared successfully"
       updated: "Event was updated successfully"
   site_name: "Diary"
