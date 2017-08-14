@@ -1,1 +1,4 @@
 %h4= t 'calendar'
+.container
+  = link_to t('events.new.title'), new_event_path, style: 'float: right;'
+= render partial: 'events/index', locals: { events: @events }

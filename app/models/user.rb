@@ -6,6 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :calendar
+  has_many :events
 
   after_create :add_calendar
 

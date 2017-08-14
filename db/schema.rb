@@ -10,13 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170813151029) do
+ActiveRecord::Schema.define(version: 20170814012319) do
 
   create_table "calendars", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_calendars_on_user_id", unique: true
+  end
+
+  create_table "calendars_events", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "calendar_id"
+    t.bigint "event_id"
+    t.index ["calendar_id"], name: "index_calendars_events_on_calendar_id"
+    t.index ["event_id"], name: "index_calendars_events_on_event_id"
+  end
+
+  create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.datetime "start"
+    t.string "place"
+    t.text "description"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_events_on_user_id", unique: true
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -32,4 +50,5 @@ ActiveRecord::Schema.define(version: 20170813151029) do
   end
 
   add_foreign_key "calendars", "users"
+  add_foreign_key "events", "users"
 end

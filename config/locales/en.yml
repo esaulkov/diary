@@ -1,6 +1,36 @@
 en:
+  actions:
+    confirmation: "Are you sure?"
+    destroy: "Delete"
+    edit: "Edit"
+    remove: "Remove"
+    save: "Save"
+  back: "Back"
   calendar: "Calendar"
   change_password: "Change password"
+  events:
+    edit:
+      title: "Edit event"
+    index:
+      actions: "Actions"
+      name: "Name"
+      owner: "Owner"
+      place: "Place"
+      start: "Date/time"
+    new:
+      title: "New event"
+    show:
+      user: "Owner:"
+      description: "Description:"
+      place: "Place:"
+      start: "Start of event:"
   log_in: "Login"
   log_out: "Logout"
+  notices:
+    calendar:
+      remove_event: "Event was successfully removed from your calendar"
+    event:
+      created: "Event was created successfully"
+      deleted: "Event was deleted successfully"
+      updated: "Event was updated successfully"
   site_name: "Diary"

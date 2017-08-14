@@ -9,4 +9,8 @@ module ApplicationHelper
       notice: 'alert-info'
     }.stringify_keys[flash_type.to_s] || flash_type.to_s
   end
+
+  def render_haml(haml, locals = {})
+    Haml::Engine.new(haml.strip_heredoc, format: :html5).render(self, locals)
+  end
 end

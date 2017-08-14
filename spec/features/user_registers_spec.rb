@@ -15,7 +15,7 @@ feature 'User registers' do
     fill_in 'Password confirmation', with: 'test-password'
     click_button 'Sign up'
 
-    expect(current_path).to start_with('/calendars/')
+    expect(current_path).to eq('/calendar')
     expect(page).to have_content('You have signed up successfully.')
   end
 

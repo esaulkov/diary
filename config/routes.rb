@@ -5,5 +5,8 @@ Rails.application.routes.draw do
 
   devise_for :users, only: %i[registrations sessions unlocks passwords]
 
-  get '/calendars/:id', to: 'calendars#show', as: 'calendar'
+  get '/calendar', to: 'calendars#show', as: 'calendar'
+  delete '/delete_event/:id', to: 'calendars#remove_event', as: 'delete_event'
+
+  resources :events, except: [:index]
 end

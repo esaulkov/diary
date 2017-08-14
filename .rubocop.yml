@@ -17,6 +17,7 @@ Metrics/LineLength:
   Exclude:
     - "config/**/*"
 Metrics/MethodLength:
+  Max: 15
   Exclude:
     - "db/migrate/*"
 Style/AsciiComments:

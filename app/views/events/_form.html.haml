@@ -1,0 +1,8 @@
+= simple_form_for event do |f|
+  = f.input :name
+  = f.input :start, as: :datetime
+  = f.input :place
+  = f.input :description, as: :text
+  = f.submit t('actions.save'), class: 'btn btn-primary'
+%br/
+%br/

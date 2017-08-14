@@ -1,0 +1,19 @@
+%table.table.table-striped
+  %thead
+    %tr
+      %th= t ".start"
+      %th= t ".name"
+      %th= t ".place"
+      %th= t ".owner"
+      %th{colspan: '2'}= t ".actions"
+  %tbody
+    - events.each do |event|
+      %tr
+        %td= l event.start, format: :short
+        %td= link_to event.name, event
+        %td= event.place
+        %td= event.user.email
+        %td
+          = edit_event_link(event)
+        %td
+          = delete_event_link(event)
