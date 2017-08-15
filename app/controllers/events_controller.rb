@@ -10,6 +10,7 @@ class EventsController < ApplicationController
     @event = current_user.events.new(event_params)
     if @event.save
       update_calendar(current_user, @event)
+      create_reminder(@event)
       redirect_to calendar_path, notice: t('notices.event.created')
     else
       render :new
@@ -57,6 +58,10 @@ class EventsController < ApplicationController
   end
 
   private
+
+  def create_reminder(event)
+    ReminderMailer.reminder_email(event.id).deliver_at(event.start - 1.hour)
+  end
 
   def event_params
     params.require(:event).permit(:name, :start, :place, :description)

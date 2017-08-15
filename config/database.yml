@@ -18,5 +18,4 @@ test:
   database: calendar_test
 
 production:
-  <<: *default
-  database: calendar
+  url: <%= ENV['DATABASE_URL'] %>

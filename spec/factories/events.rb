@@ -5,6 +5,5 @@ FactoryGirl.define do
     place 'MyString'
     description 'MyText'
     user
-    calendar
   end
 end

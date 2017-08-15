@@ -41,4 +41,7 @@ en:
       deleted: "Event was deleted successfully"
       shared: "Event was shared successfully"
       updated: "Event was updated successfully"
+  reminder_mailer:
+    reminder_email:
+      subject: "Your event will start soon"
   site_name: "Diary"

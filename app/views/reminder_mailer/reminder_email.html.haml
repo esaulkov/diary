@@ -1,0 +1,8 @@
+%p Your event, #{@event.name}, will start within 1 hour.
+%h4 Event details
+%hr/
+%p
+  %strong= @event.name
+%p Starts: #{l @event.start, format: :long}
+%p Place: #{@event.place}
+%p Description: #{@event.description}

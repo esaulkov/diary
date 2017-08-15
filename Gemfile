@@ -14,6 +14,9 @@ gem 'jquery-rails', '~> 4.3.1'
 gem 'mysql2', '~> 0.4.9'
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.3'
+gem 'resque', '~> 1.27.4'
+gem 'resque-scheduler', '~> 4.3.0'
+gem 'resque_mailer', '~> 2.4.2'
 gem 'sass-rails', '~> 5.0'
 gem 'simple_form', '~> 3.5.0'
 gem 'turbolinks', '~> 5'
@@ -41,7 +44,7 @@ end
 group :test do
   gem 'capybara-webkit', '~> 1.14.0'
   gem 'database_cleaner', '~> 1.6.1'
-  gem 'formulaic'
+  gem 'email_spec', '~> 2.1.1'
   gem 'simplecov', '~> 0.14.1', require: false
   gem 'timecop', '~> 0.9.1'
   gem 'webmock', '~> 3.0.1'
