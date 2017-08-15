@@ -2,10 +2,12 @@
   %li
     = link_to t(:calendar), calendar_path
   %li
+    = notification_link(current_user)
+  %li
     = link_to edit_user_registration_path do
       %span.glyphicon.glyphicon-user
       = current_user.email
   %li
     = link_to destroy_user_session_path, method: :delete do
-      = t :log_out
       %span.glyphicon.glyphicon-log-out
+      = t :log_out

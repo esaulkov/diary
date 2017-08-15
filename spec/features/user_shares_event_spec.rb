@@ -17,6 +17,8 @@ feature 'user shares an event', js: true do
     click_button 'Share'
 
     expect(page).to have_content('Event was shared successfully')
+    user2.reload
+    expect(user2.notifications_count).to eq(1)
   end
 
   context 'when something wrong' do

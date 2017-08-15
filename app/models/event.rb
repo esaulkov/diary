@@ -4,6 +4,7 @@
 class Event < ApplicationRecord
   belongs_to :user
   has_and_belongs_to_many :calendars
+  has_many :notifications, dependent: :destroy
 
   validates :name, presence: true
   validates :place, presence: true

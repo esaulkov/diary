@@ -26,6 +26,7 @@ class EventsController < ApplicationController
       message = {alert: t('alerts.event.double_shared')}
     else
       user.calendar.events << event
+      user.notifications.create(event_id: event.id)
       message = {notice: t('notices.event.shared')}
     end
 

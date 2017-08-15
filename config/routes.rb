@@ -10,4 +10,6 @@ Rails.application.routes.draw do
 
   resources :events, except: [:index]
   post '/events/share', to: 'events#share', as: 'share_event'
+
+  get '/notification', to: 'notifications#decrease', as: 'notificaton'
 end

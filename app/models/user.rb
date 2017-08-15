@@ -5,8 +5,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_one :calendar
-  has_many :events
+  has_one :calendar, dependent: :destroy
+  has_many :events, dependent: :destroy
+  has_many :notifications, dependent: :destroy
 
   after_create :add_calendar
 
